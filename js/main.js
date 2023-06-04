@@ -4,7 +4,7 @@ const productos = [
     {
         id: "Remera-01",
         titulo: "Remera 01",
-        imagen: "imagenes/Remeras/Remera-01.JPG",
+        imagen: "/imagenes/Remeras/Remera-01.JPG",
         categoria: {
             nombre: "Remeras",
             id: "remeras"
@@ -185,11 +185,10 @@ function actualizarBotonesAgregar() {
 
 let productosEnCarrito;
 
-
-const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
 if (productosEnCarritoLS) {
-    productosEnCarrito = productosEnCarritoLS;
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarNumerito();
 } else {
     productosEnCarrito = [];
@@ -217,5 +216,4 @@ function actualizarNumerito() {
     numerito.innerText = nuevoNumerito;
 
 }
-
 
