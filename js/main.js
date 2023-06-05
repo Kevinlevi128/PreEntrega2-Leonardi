@@ -1,130 +1,12 @@
-//PRODUCTOS
-const productos = [
-    //REMERAS
-    {
-        id: "Remera-01",
-        titulo: "Remera 01",
-        imagen: "/imagenes/Remeras/Remera-01.JPG",
-        categoria: {
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 5000
-    },
-    {
-        id: "Remera-02",
-        titulo: "Remera 02",
-        imagen: "imagenes/Remeras/Remera-02.JPG",
-        categoria: {
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 5000
-    },
-    {
-        id: "Remera-03",
-        titulo: "Remera 03",
-        imagen: "imagenes/Remeras/Remera-03.JPG",
-        categoria: {
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 5000
-    },
-    {
-        id: "Remera-04",
-        titulo: "Remera 04",
-        imagen: "imagenes/Remeras/Remera-04.JPG",
-        categoria: {
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 5000
-    },
-    //PANTALONES
-    {
-        id: "Pantalon-01",
-        titulo: "Pantalon 01",
-        imagen: "imagenes/Pantalones/Pantalon-01.jpg",
-        categoria: {
-            nombre: "Pantalones",
-            id: "pantalones"
-        },
-        precio: 7000
-    },
-    {
-        id: "Pantalon-02",
-        titulo: "Pantalon 02",
-        imagen: "imagenes/Pantalones/Pantalon-02.jpg",
-        categoria: {
-            nombre: "Pantalones",
-            id: "pantalones"
-        },
-        precio: 7000
-    },
-    {
-        id: "Pantalon-03",
-        titulo: "Pantalon 03",
-        imagen: "imagenes/Pantalones/Pantalon-03.jpg",
-        categoria: {
-            nombre: "Pantalones",
-            id: "pantalones"
-        },
-        precio: 7000
-    },
-    {
-        id: "Pantalon-04",
-        titulo: "Pantalon 04",
-        imagen: "imagenes/Pantalones/Pantalon-04.jpg",
-        categoria: {
-            nombre: "Pantalones",
-            id: "pantalones"
-        },
-        precio: 7000
-    },
-    //BUZOS
-    {
-        id: "Buzo-01",
-        titulo: "Buzo 01",
-        imagen: "imagenes/Buzos/Buzo-01.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 8000
-    },
-    {
-        id: "Buzo-02",
-        titulo: "Buzo 02",
-        imagen: "imagenes/Buzos/Buzo-02.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 8000
-    },
-    {
-        id: "Buzo-03",
-        titulo: "Buzo 03",
-        imagen: "imagenes/Buzos/Buzo-03.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 8000
-    },
-    {
-        id: "Buzo-04",
-        titulo: "Buzo 04",
-        imagen: "imagenes/Buzos/Buzo-04.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 8000
-    },
+let productos = [];
 
-];
+fetch("js/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
+
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -154,7 +36,7 @@ function cargarProductos(productosElegidos) {
     })
     actualizarBotonesAgregar()
 }
-cargarProductos(productos);
+
 
 botonesCategorias.forEach(boton =>{
     boton.addEventListener(`click`, (e) => {
@@ -195,6 +77,26 @@ if (productosEnCarritoLS) {
 }
 
 function agregarAlCarrito(e){
+
+    Toastify({
+        text: "Producto Agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, #311a90, #785ce9)",
+        borderRadius: "2rem",
+        textTransform: "uppercase",
+        fontSize: ".75rem",
+        },
+        offset: {
+            x: "1.5rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: "1.5rem" // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
 
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton)

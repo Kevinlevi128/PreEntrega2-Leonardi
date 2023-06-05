@@ -1,0 +1,123 @@
+[
+    {
+        "id": "Remera-01",
+        "titulo": "Remera 01",
+        "imagen": "/imagenes/Remeras/Remera-01.JPG",
+        "categoria": {
+            "nombre": "Remeras", 
+            "id": "remeras"
+        },
+        "precio": 5000
+    },
+    {
+        "id": "Remera-02",
+        "titulo": "Remera 02",
+        "imagen": "imagenes/Remeras/Remera-02.JPG",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 5000
+    },
+    {
+        "id": "Remera-03",
+        "titulo": "Remera 03",
+        "imagen": "imagenes/Remeras/Remera-03.JPG",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 5000
+    },
+    {
+        "id": "Remera-04",
+        "titulo": "Remera 04",
+        "imagen": "imagenes/Remeras/Remera-04.JPG",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 5000
+    },
+    {
+        "id": "Pantalon-01",
+        "titulo": "Pantalon 01",
+        "imagen": "imagenes/Pantalones/Pantalon-01.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 7000
+    },
+    {
+        "id": "Pantalon-02",
+        "titulo": "Pantalon 02",
+        "imagen": "imagenes/Pantalones/Pantalon-02.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 7000
+    },
+    {
+        "id": "Pantalon-03",
+        "titulo": "Pantalon 03",
+        "imagen": "imagenes/Pantalones/Pantalon-03.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 7000
+    },
+    {
+        "id": "Pantalon-04",
+        "titulo": "Pantalon 04",
+        "imagen": "imagenes/Pantalones/Pantalon-04.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 7000
+    },
+    {
+        "id": "Buzo-01",
+        "titulo": "Buzo 01",
+        "imagen": "imagenes/Buzos/Buzo-01.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 8000
+    },
+    {
+        "id": "Buzo-02",
+        "titulo": "Buzo 02",
+        "imagen": "imagenes/Buzos/Buzo-02.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 8000
+    },
+    {
+        "id": "Buzo-03",
+        "titulo": "Buzo 03",
+        "imagen": "imagenes/Buzos/Buzo-03.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 8000
+    },
+    {
+        "id": "Buzo-04",
+        "titulo": "Buzo 04",
+        "imagen": "imagenes/Buzos/Buzo-04.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 8000
+    }
+
+]
