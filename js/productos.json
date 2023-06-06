@@ -2,7 +2,7 @@
     {
         "id": "Remera-01",
         "titulo": "Remera 01",
-        "imagen": "/imagenes/Remeras/Remera-01.JPG",
+        "imagen": "imagenes/Remeras/Remera-01.JPG",
         "categoria": {
             "nombre": "Remeras", 
             "id": "remeras"
